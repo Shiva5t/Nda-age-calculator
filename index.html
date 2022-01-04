@@ -1,0 +1,307 @@
+<html>
+<head>
+<title>Attempt calculater</title>
+<script>
+function ageCalculator() {
+    var userinput = document.getElementById("DOB").value;
+    var dob = new Date(userinput);
+    if(userinput==null || userinput=='') {
+      document.getElementById("message").innerHTML = "**Choose a date please!";  
+      return false; 
+    } else {
+    var n21_2s=new Date(2003,0,2);
+    var n21_2e=new Date(2006,0,01);
+    var n22_1s=new Date(2003,06,02);
+    var n22_1e=new Date(2006,06,01);
+    var n22_2s=new Date(2004,00,02);
+    var n22_2e=new Date(2007,00,01);
+    var n23_1s=new Date(2004,06,02);
+    var n23_1e=new Date(2007,06,01);
+    var n23_2s=new Date(2005,00,02);
+    var n23_2e=new Date(2008,00,01);
+    var n24_1s=new Date(2005,06,02);
+    var n24_1e=new Date(2008,06,01);
+    var n24_2s=new Date(2006,00,02);
+    var n24_2e=new Date(2009,00,01);
+    var n25_1s=new Date(2006,06,02);
+    var n25_1e=new Date(2009,06,01);
+    var n25_2s=new Date(2007,00,02);
+    var n25_2e=new Date(2010,00,01);
+
+      if(dob.toLocaleDateString('en-CA')>=n21_2s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n21_2e.toLocaleDateString('en-CA') )
+      {var res = "NDA 2 2021"}
+      else{{var res = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n22_1s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n22_1e.toLocaleDateString('en-CA') )
+      {var res1 = " NDA 1 2022"}
+      else{{var res1 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n22_2s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n22_2e.toLocaleDateString('en-CA') )
+      {var res2 = "NDA 2 2022"}
+      else{{var res2 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n23_1s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n23_1e.toLocaleDateString('en-CA') )
+      {var res3 = "NDA 1 2023"}
+      else{{var res3 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n23_2s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n23_2e.toLocaleDateString('en-CA') )
+      {var res4 = " NDA 2 2023"}
+      else{{var res4 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n24_1s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n24_1e.toLocaleDateString('en-CA') )
+      {var res5 = " NDA 1 2024"}
+      else{{var res5 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n24_2s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n24_2e.toLocaleDateString('en-CA') )
+      {var res6 = " NDA 2 2024"}
+      else{{var res6 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n25_1s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n25_1e.toLocaleDateString('en-CA') )
+      {var res7 = " NDA 1 2025"}
+      else{{var res7 = ""}}
+      if(dob.toLocaleDateString('en-CA')>=n25_2s.toLocaleDateString('en-CA') && dob.toLocaleDateString('en-CA')<=n25_2e.toLocaleDateString('en-CA') )
+      {var res8 = " NDA 2 2025"}
+      else{{var res8 = ""}}
+    //display the calculated age
+    return document.getElementById("result").innerHTML =  
+             "Result: " + res + "\n" + res1 + "\n" + res2 + "\n" + res3 + "\n" + res4 + "\n" + res5 + "\n" + res6 + "\n" + res7 + "\n" + res8 ;
+    }
+}
+</script>
+</head>
+<body>
+<style>
+body{background-color:rgb(50,90,89);}
+center{border:3px solid black;
+border-radius:80px;
+margin:100px;
+height:250px;
+padding-top:100px;
+background-color:rgb(40,60,40);}
+center:hover{background-color:rgb(10,70,15);}
+buttn{background-color:rgb(80,20,10);
+color:yellow;
+padding:7px;
+box-shadow: 1px 4px 16px 20px rgba(10,80,150,14);}
+b{color:grey;
+font-size:25px;}
+.result{border:3px solid black;
+border-radius:8px;
+margin:100px;
+background-color:white;
+font-size:20px;}
+input:focus{background-color:yellow;}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+* {
+  padding: 0px;
+  margin: 0px;
+}
+bod{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #00071C;
+}
+ ul {
+   position: top;
+   display: flex;
+   transform: rotate(-deg) skew(deg);
+   transform-style: preserve-3d;
+   
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 600px;
+  height: 60px;
+  margin: 10px 20px;
+}
+ul li:before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: #2a2a2a;
+  trnasform-origin: top;
+  transform: skewX(0deg);
+}
+ul li:after{
+  content: '';
+  position: absolute;
+  top:5px;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background: #2a2a2a;
+  trnasform-origin: right;
+  transform: skewY(-49deg);
+  }
+ 
+ ul li span{
+ position: absolute;
+ top: 0;
+ lef: 0;
+ width: 100%;
+ height: 100%;
+ display: flex !important;
+ background: #2a2a2a;
+ justify-content: center;
+ align-items: center;
+ color: #fff;
+ font-size: 30px !important;
+ transition: 1.5s ease-out;
+ }
+ ul li:hover span {
+ z-index: 1000;
+ transition: .3s;
+ color: #fff;
+ box-shadw: -1px 1px 1px rgba(0, 0, 0, .5);
+ }
+ul li:hover span:nth-child(5){
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+ul li:hover span:nth-child(4){
+  transform: translate(30px, -30px);
+  opacity: .8;
+}
+ul li:hover span:nth-child(3){
+  transform: translate(20px, -20px);
+  opacity: .6;
+}
+ul li:hover span:nth-child(2){
+  transform: translate(10px, -10px);
+  opacity: .4;
+}ul li:hover span:nth-child(1){
+  transform: translate(0px, 0px);
+  opacity: .2;
+}
+ul li:nth-child(1):hover span{
+  background: #52E19F !important;
+}
+ul li:nth-child(2):hover span{
+  background: #2C3456 !important;
+}
+ul li:nth-child(3):hover span{
+  background: #EA6E96 !important;
+}
+ul li:nth-child(4):hover span{
+  background: #FCEB00 !important;
+}
+ul {margin:107px;
+padding:20px;
+float:top;}
+.al{font-size:40px;
+border:3px solid red;
+border-radius:8px;
+color:yellow;
+margin:70px; }
+.develop{color:black;
+font-size:30px;
+border-radius:17px;
+border:4px solid pink;
+background:white;
+margin:70px;
+}
+.border{border:4px solid orange;
+border-radius:30px;
+margin:2px;
+padding-left:2px;}
+
+</style>
+<img src="http://www.indiandefencereview.com/wp-content/uploads/2015/12/various-defence-weapons-and-equipments.jpg" width="100%" height="150px" >
+<div class="develop">
+Developed By-- Narayan Patidar , Shivansh Leve
+</div>
+<center>
+<h2 style="color: 32A80F" align="center"> Calculate attempt of NDA from Date of Birth <br> <br> </h2> 
+
+<!-- Choose a date and enter in input field -->
+<b> Enter Date of Birth: <input type=date id = DOB> </b>
+<span id = "message" style="color:red"> </span> <br><br>  </br></br>
+
+<!-- Choose a date and enter in input field -->
+<button  class="glow-on-hover"type="submit" onclick = "ageCalculator()"> Calculate attempt </button> 
+</center>
+<h3 class="result" style="color:rgb(140,30,60)" id="result" float="center"></h3> 
+<div class="border">
+<div class="al">
+For NDA content join Telegram channel
+</div>
+  <ul> 
+    <li>
+      <a href="https://t.me/ndaandssbpreparation">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      
+        <span class="fa fa-facebook">Join us</span>
+      </a> 
+    </li>
+    
+    
+    
+  </ul>  
+</div> 
+<br><br><br><br><br><br><br>
+<a href='https://thesiswritingservice.net/'>thesi</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=4828c1376b52095b723cef18c136e6c7af702737'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/907627/t/11"></script>
+</body>
+</html>
